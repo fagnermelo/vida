@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>&lt;Fagner Melo&gt; Augmented Reality</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no,
+  minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- 💁 Include both scripts below to support all browsers! -->
+
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module"
+      src="https://unpkg.com/@google/model-viewer@0.10.0/dist/model-viewer.js">
+  </script>
+
+  <!-- Loads <model-viewer> for old browsers like IE11: -->
+  <script nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+  </script>
+
+  <!-- The following libraries and polyfills are recommended to maximize browser support -->
+  <!-- NOTE: you must adjust the paths as appropriate for your project -->
+      
+  <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+
+  <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+  <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+
+  <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+  <script src="https://unpkg.com/resize-observer-polyfill@1.5.1/dist/ResizeObserver.js"></script>
+
+  <!-- 💁 OPTIONAL: Fullscreen polyfill is required for experimental AR features in Canary -->
+   <!--<script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>-->
+
+  <!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
+  <!--<script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>-->
+
+</head>
+<body>
+<pre><p>
+O risco de contar 
+histórias</p><p2>
+Há uma certa profundidade,
+há um abismo entre o que vivemos 
+e o que conseguimos contar.
+
+E, nas redes sociais, 
+onde muitos se esforçam 
+para serem diferentes,   
+há o risco de ser superficial.
+
+Quanto mais postamos, 
+mais nos distanciamos 
+de nós mesmos.
+
+Quem diria que haveria riscos 
+em contar sobre sua história?
+
+Após anos usando redes sociais 
+posso concluir:
+ninguém sabe nada sobre mim! 
+Por que? porque... 
+    
+Há uma certa profundidade,
+há discursos ensaiados,
+há sonhos,
+há realidade,
+há ancestralidade.
+
+Eu não sou só lugares, 
+eu não sou só momentos, 
+status, 
+eu não sou só esperança.
+
+Também sou amor,
+porque há amor.
+Há inspiração.
+Há trabalho.
+Há dor.
+Há segredo.
+Há sonhos.
+Há vida.</p2>
+
+<p>Vida</p><p2> 
+Uma experiência autobiográfica 
+em realidade virtual e aumentada:</p2></pre>
+  <model-viewer src="assets/ROOM-VERSAO-05-05.glb" 
+                ios-src="assets/ROOM-VERSAO-05-05.usdz"
+                ar
+                auto-rotate
+                ar-scale=”auto”
+                camera-controls 
+                camera-orbit="2.2rad 1.2rad 0,5m"
+                shadow-intensity="5"
+                alt="Home Office" background-color="#70BCD1"> 
+ 
+              
+  </model-viewer>
+<p3>Para Android instale: <a href="https://play.google.com/store/apps/details?id=com.google.ar.core"> Google ArCore</a></p3>
+
+ 
+  
+ <p2>Escrito e desenvolvido por <a href="https://www.behance.net/fagnermelo" target="_blank">Fagner Melo</a></p3></p2>
+ 
+  
+</body>
+</html>

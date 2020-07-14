@@ -1,0 +1,6 @@
+ ---- Model on C4D ------
+Use CONNECT +  for merged ALL MODELS 
+Convert object into Polygonal object (MAKE EDITABLE)
+use BAKE OBJECT for merged all TEXTURES and UVS (just SINGLE TEXTURE box)
+EXPORT in GLTF bin (GLB) - (just UVs - FlipZ and TEXTURES box)
+------ Model OK ------
