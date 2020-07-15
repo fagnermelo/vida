@@ -54,16 +54,5 @@
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
   </script>
   
-    <script>
-        (() => {
-          var checkExist = setInterval(function() {
-           if (document.querySelector("#viewer-singleton") != null) {
-              modelViewer = document.querySelector("#viewer-singleton");
-              modelViewer.activateAR();
-              clearInterval(checkExist);
-           }
-        }, 100);
-        })();
-    </script>
 </body>
 </html>
