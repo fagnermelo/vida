@@ -21,35 +21,8 @@ body {
   color: #244376;
 }
 
-p {
-  display: block;
-  width: 400px;
-  margin: 50px auto;
-  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
-}
 
-p1 {
-  display: block;
-  width: 0px;
-  margin: 0px auto;
-  font: 20px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
-}
-
-p2 {
-  display: block;
-  width: 400px;
-  margin: 50px auto;
-  font: 15px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
-}
-
-p3 {
-  display: block;
-  width: 400px;
-  margin: 50px auto;
-  font: 10px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
-}
-
-#card {
+.card {
   margin: 3em auto;
   display: flex;
   flex-direction: column;
@@ -67,6 +40,7 @@ model-viewer {
 .attribution {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   margin: 1em;
 }
 
@@ -84,11 +58,6 @@ model-viewer {
   text-decoration: none;
 }
 
-iframe {
-  width: 100%;
-  height: 400px;
-}
-
 footer {
   display: flex;
   flex-direction: column;
@@ -98,34 +67,4 @@ footer {
   font-style: italic;
   line-height: 1.5em;
 }
-button{
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    border: none;
-    background-color: blue;
-    box-sizing: border-box;
-  }
 
-  button[slot="hotspot-hand"]{
-    --min-hotspot-opacity: 0;
-    background-color: red;
-  }
-
-  button[slot="hotspot-foot"]:not([data-visible]) {
-    background-color: transparent;
-    border: 3px solid blue;
-  }
-
-  #annotation{
-    background-color: #888888;
-    position: absolute;
-    transform: translate(10px, 10px);
-    border-radius: 10px;
-    padding: 10px;
-  }
-  /* This keeps child nodes hidden while the element loads */
-  :not(:defined) > * {
-    display: none;
-  }
