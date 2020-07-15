@@ -3,8 +3,8 @@
 <head>
   <title>&lt;Fagner Melo&gt; Augmented Reality</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no,
-  minimum-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
 
   <!-- 💁 Include both scripts below to support all browsers! -->
@@ -44,21 +44,41 @@
 Uma experiência em Realidade Virtual e Aumentada:</p2></pre>
   <model-viewer src="assets/ROOM-VERSAO-05-05.glb" 
                 ios-src="assets/ROOM-VERSAO-05-05.usdz"
-                ar
-                auto-rotate
+                background-color="#bbbbbb"
+                auto-rotate  ar
                 ar-scale=”auto”
                 camera-controls 
                 camera-orbit="2.2rad 1.2rad 0,5m"
-                shadow-intensity="5"
-                alt="Home Office" background-color="#70BCD1"> 
- 
-              
+                shadow-intensity="1"
+                alt="Fagner Melo - Home Office"
+                background-color="#bbbbbb"
+                style="position:absolute; left:0; top:0; margin:0; padding:0; width:100%; height:100%;"
+                id="viewer-singleton">              
   </model-viewer>
-<p3>Para Android instale: <a href="https://play.google.com/store/apps/details?id=com.google.ar.core"> Google ArCore</a></p3>
-
- 
   
- <p2>Escrito e desenvolvido por <a href="https://www.behance.net/fagnermelo" target="_blank">Fagner Melo</a></p3></p2>
+    <!-- 💁 Include both scripts below to support all browsers! -->
+
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+  </script>
+
+  <!-- Loads <model-viewer> for old browsers like IE11: -->
+  <script nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+  </script>
+  
+    <script>
+        (() => {
+          var checkExist = setInterval(function() {
+           if (document.querySelector("#viewer-singleton") != null) {
+              modelViewer = document.querySelector("#viewer-singleton");
+              modelViewer.activateAR();
+              clearInterval(checkExist);
+           }
+        }, 100);
+        })();
+    </script>
  
   
 </body>
